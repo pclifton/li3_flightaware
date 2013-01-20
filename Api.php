@@ -28,8 +28,7 @@ class Api {
             'source' => $method
         );
         // @TODO: Create results wrapper class and test bad-request results
-        $res = $conn->read(new Api\Query($params), $options);
-        die(debug($res));
+        return $conn->read(new Api\Query($params), $options);
     }
     
     /**
